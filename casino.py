@@ -23,9 +23,9 @@ while startMoney > 0:
         continue
     print("You entered ", enterMon)
     enterCol = str(input("Enter color: "))
-    if enterCol == "Green":
-        print("You lose, green color is JOKER!")
-        break
+    if enterCol != "Black" & "Red":
+        print("Green, so choose color again.")
+        continue
     value = get_value()
     print(value)
     if value == enterCol: 
