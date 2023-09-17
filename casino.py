@@ -23,7 +23,7 @@ while startMoney > 0:
         continue
     print("You entered ", enterMon)
     enterCol = str(input("Enter color: "))
-    if enterCol != "Black" & "Red":
+    if enterCol != "Black" and  enterCol !="Red":
         print("Green, so choose color again.")
         continue
     value = get_value()
