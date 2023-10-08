@@ -19,11 +19,11 @@ def is_it_possible(words, index1, index2):
             del firstLett[i]
         if lastLett [i] == 0:
             del lastLett[i]
-    return is_it_possible
+    return len(firstLett) == 1 and len(lastLett) == 1
  ## print (firstLett)
 ## print (lastLett)
 
-words_to_control = ["ahoj", "nevim", "jo"]
+words_to_control = ["ahoj", "ono", "jo"]
 index1 = 0
 index2 = -1
 if is_it_possible(words_to_control, index1, index2):
