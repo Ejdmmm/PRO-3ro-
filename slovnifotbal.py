@@ -11,17 +11,15 @@ def is_it_possible(words, index1, index2):
     firstLett =prep_count(words, index1)
     lastLett =prep_count(words, index2)
     prunik = set(firstLett.keys()).intersection(set(lastLett.keys()))
- ## print(set(firstLett.keys()))
-## print(set(lastLett.keys()))
-## print (prunik)
     for i in prunik:
         value=firstLett[i]
-    firstLett[i]-=value
-    lastLett[i]-=value
-    if firstLett [i] == 0:
-        del firstLett[i]
-    if lastLett [i] == 0:
-        del lastLett[i]    
+        firstLett[i]-=value
+        lastLett[i]-=value
+        if firstLett [i] == 0:
+            del firstLett[i]
+        if lastLett [i] == 0:
+            del lastLett[i]
+    return is_it_possible
  ## print (firstLett)
 ## print (lastLett)
 
