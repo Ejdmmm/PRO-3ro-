@@ -7,27 +7,28 @@ def prep_count(words, index):
         else:
             count[char] = 1
     return count
-
-firstLett =prep_count(["ahoj", "oko", "jol"],0)
-lastLett =prep_count(["ahoj", "oko", "jol"],-1)
-
-print(set(firstLett.keys()))
-print(set(lastLett.keys()))
-prunik = set(firstLett.keys()).intersection(set(lastLett.keys()))
-print (prunik)
-for i in prunik:
-    value=firstLett[i]
+def is_it_possible(words, index1, index2):
+    firstLett =prep_count(words, index1)
+    lastLett =prep_count(words, index2)
+    prunik = set(firstLett.keys()).intersection(set(lastLett.keys()))
+ ## print(set(firstLett.keys()))
+## print(set(lastLett.keys()))
+## print (prunik)
+    for i in prunik:
+        value=firstLett[i]
     firstLett[i]-=value
     lastLett[i]-=value
     if firstLett [i] == 0:
         del firstLett[i]
     if lastLett [i] == 0:
         del lastLett[i]    
-print (firstLett)
-print (lastLett)
+ ## print (firstLett)
+## print (lastLett)
 
-if prep_count(firstLett, lastLett):
-    print("You cannot")
+words_to_control = ["ahoj", "nevim", "jo"]
+index1 = 0
+index2 = -1
+if is_it_possible(words_to_control, index1, index2):
+    print("You can play")
 else:
-    print("You can play")       
- 
+    print("You cant, sorry :(")
