@@ -23,7 +23,7 @@ def is_it_possible(words, index1, index2):
  ## print (firstLett)
 ## print (lastLett)
 
-words_to_control = ["ahoj", "ono", "jo"]
+words_to_control = ["ahoj", "ono", "ne"]
 index1 = 0
 index2 = -1
 if is_it_possible(words_to_control, index1, index2):
